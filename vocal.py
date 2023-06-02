@@ -41,14 +41,13 @@ while True:
                 global guy
                 guy = said
 
-                if "Friday" in said:
+                if "Honey" in said:
                     words = said.split()
                     new_string = ' '.join(words[1:])
                     # messages = update_chat(messages, "user", new_string)
                     global messages
                     messages = update_chat(messages, "user", new_string)
                     print(new_string)
-                    print("kya haal")
                     completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages)
                     # completion = openai.Completion.create(model="text-davinci-003", max_token=100, prompt=said, temperature=0)
                     print(completion)
